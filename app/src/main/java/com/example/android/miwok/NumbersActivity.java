@@ -18,11 +18,7 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -31,23 +27,20 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
         //create arralist
-        ArrayList<String> myList= new ArrayList<String>();
-        myList.add("one");
-        myList.add("two");
-        myList.add("three");
-        myList.add("four");
-        myList.add("five");
-        myList.add("six");
-        myList.add("seven");
-        myList.add("eight");
-        myList.add("nine");
-        myList.add("ten");
-        myList.add("eleven");
-        myList.add("twelve");
-        myList.add("therein");
-        /*
+       //ArrayList<String> myList= new ArrayList<String>();
+        ArrayList<Word> myList = new ArrayList<Word>();
+
+        myList.add(new Word("yek","One"));
+        myList.add(new Word("doo","two"));
+        myList.add(new Word("seh","three"));
+        myList.add(new Word("doo","four"));
+        myList.add(new Word("doo","five"));
+        myList.add(new Word("doo","six"));
+        myList.add(new Word("doo","seven"));
+        myList.add(new Word("doo","eight"));
+            /*
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myList);
         ListView myListView = (ListView) findViewById(R.id.idrootLayout);
         myListView.setAdapter(myAdapter);
@@ -60,9 +53,9 @@ public class NumbersActivity extends AppCompatActivity {
 //            listview.setText(myList.get(x));
 //            nrootview.addView(listview);
 //        }
-        ArrayAdapter<String> gridAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,myList);
-        GridView mygv = (GridView) findViewById(R.id.idgridlist);
-        mygv.setAdapter(gridAdapter);
+        myArrayAdapter myAdapter = new myArrayAdapter(this,myList);
+        ListView myview = (ListView) findViewById(R.id.idnumericlist);
+        myview.setAdapter(myAdapter);
         Log.v("NumbersActivity",  "List0: " + myList.get(0) );
         Log.v("NumbersActivity",  "List1: " + myList.get(1) );
         //
