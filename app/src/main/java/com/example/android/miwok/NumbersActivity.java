@@ -32,14 +32,16 @@ public class NumbersActivity extends AppCompatActivity {
        //ArrayList<String> myList= new ArrayList<String>();
         ArrayList<Word> myList = new ArrayList<Word>();
 
-        myList.add(new Word("yek","One"));
-        myList.add(new Word("doo","two"));
-        myList.add(new Word("seh","three"));
-        myList.add(new Word("doo","four"));
-        myList.add(new Word("doo","five"));
-        myList.add(new Word("doo","six"));
-        myList.add(new Word("doo","seven"));
-        myList.add(new Word("doo","eight"));
+        myList.add(new Word("one", "lutti", R.drawable.number_one));
+        myList.add(new Word("two", "otiiko", R.drawable.number_two));
+        myList.add(new Word("three", "tolookosu", R.drawable.number_three));
+        myList.add(new Word("four", "oyyisa", R.drawable.number_four));
+        myList.add(new Word("five", "massokka", R.drawable.number_five));
+        myList.add(new Word("six", "temmokka", R.drawable.number_six));
+        myList.add(new Word("seven", "kenekaku", R.drawable.number_seven));
+        myList.add(new Word("eight", "kawinta", R.drawable.number_eight));
+        myList.add(new Word("nine", "wo’e", R.drawable.number_nine));
+        myList.add(new Word("ten", "na’aacha", R.drawable.number_ten));
             /*
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myList);
         ListView myListView = (ListView) findViewById(R.id.idrootLayout);
@@ -53,7 +55,7 @@ public class NumbersActivity extends AppCompatActivity {
 //            listview.setText(myList.get(x));
 //            nrootview.addView(listview);
 //        }
-        myArrayAdapter myAdapter = new myArrayAdapter(this,myList);
+        myArrayAdapter myAdapter = new myArrayAdapter(this,myList,R.color.category_numbers);
         ListView myview = (ListView) findViewById(R.id.idnumericlist);
         myview.setAdapter(myAdapter);
         Log.v("NumbersActivity",  "List0: " + myList.get(0) );

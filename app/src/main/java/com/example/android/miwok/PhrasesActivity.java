@@ -33,14 +33,16 @@ public class PhrasesActivity extends AppCompatActivity {
         //ArrayList<String> myList= new ArrayList<String>();
         ArrayList<Word> myList = new ArrayList<Word>();
 
-        myList.add(new Word("salam","Hello"));
-        myList.add(new Word("doo","two"));
-        myList.add(new Word("seh","three"));
-        myList.add(new Word("doo","four"));
-        myList.add(new Word("doo","five"));
-        myList.add(new Word("doo","six"));
-        myList.add(new Word("doo","seven"));
-        myList.add(new Word("doo","eight"));
+        myList.add(new Word("Where are you going?", "minto wuksus"));
+        myList.add(new Word("What is your name?", "tinnә oyaase'nә"));
+        myList.add(new Word("My name is...", "oyaaset..."));
+        myList.add(new Word("How are you feeling?", "michәksәs?"));
+        myList.add(new Word("I’m feeling good.", "kuchi achit"));
+        myList.add(new Word("Are you coming?", "әәnәs'aa?"));
+        myList.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
+        myList.add(new Word("I’m coming.", "әәnәm"));
+        myList.add(new Word("Let’s go.", "yoowutis"));
+        myList.add(new Word("Come here.", "әnni'nem"));
             /*
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myList);
         ListView myListView = (ListView) findViewById(R.id.idrootLayout);
@@ -54,7 +56,7 @@ public class PhrasesActivity extends AppCompatActivity {
 //            listview.setText(myList.get(x));
 //            nrootview.addView(listview);
 //        }
-        myArrayAdapter myAdapter = new myArrayAdapter(this,myList);
+        myArrayAdapter myAdapter = new myArrayAdapter(this,myList,R.color.category_phrases);
         ListView myview = (ListView) findViewById(R.id.idnumericlist);
         myview.setAdapter(myAdapter);
         Log.v("NumbersActivity",  "List0: " + myList.get(0) );
